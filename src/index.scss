@@ -1,7 +1,7 @@
 @mixin prefix($prop, $val) {
-	@each $prefix in '-webkit-', '-moz-', '-ms-', '' {
-		#{$prefix}#{$prop}: $val;
-	}
+  @each $prefix in '-webkit-', '-moz-', '-ms-', '' {
+    #{$prefix}#{$prop}: $val;
+  }
 }
 
 $red: #fe1662;
@@ -14,7 +14,8 @@ body {
   margin: 20px;
 }
 
-ol, ul {
+ol,
+ul {
   padding-left: 30px;
 }
 
@@ -31,47 +32,38 @@ ol, ul {
 }
 
 .game {
-  // display: flex;
-  // flex-direction: row;
-  max-width: 80%;
-  margin: 50px auto;
-  border-radius: 5px;
+  
+}
+
+.game-board {
   @include prefix(box-shadow, 10px 10px 0 rgba(0, 0, 0, 0.1));
   background-color: darken($blue, 10%);
-  position: relative;
+  margin: 20px auto;
+  border-radius: 6px;
+  width: 300px;
+  height: 300px;
+  padding: 5px;
 }
 
-.game-board{
-  padding: 2rem 2rem 2rem 2rem;
+.board-row {
   display: flex;
-  flex-direction: column;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
-
-.board-row{
-  flex: 5;
-  display: flex;
-  flex-direction: row;
-}
-
 
 .square {
   background: $red;
-  border: 2px solid lighten($red, 10%);
+  // border: 2px solid lighten($red, 10%);
   // @include prefix(box-shadow, 3px 3px 0 lighten(black, 10%));
   // @include prefix(border-radius, 5px);
-  flex: 4;
-  display: flex;
-  
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 30vw;
-  // maintain aspect ratio 
-  width: 30vw;
-  height: 30vw;
-  margin-right: -1px;
-  margin-top: -1px;
-  padding: 0;
-  text-align: center;
+  margin: 5px;
+  width: 90px;
+  height: 90px;
+  border-radius: 6px;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  position: relative;
 }
 
 .game-info {
