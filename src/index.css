@@ -17,32 +17,52 @@ ul {
   background: #ddd; }
 
 .game-board {
+  position: relative;
   -webkit-box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);
   -ms-box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);
   background-color: #181a28;
-  margin: 20px auto;
+  margin: 40px auto;
   border-radius: 6px;
-  width: 300px;
-  height: 300px;
-  padding: 5px; }
+  width: 400px;
+  height: 400px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  text-align: center; }
 
 .board-row {
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
+  display: block; }
 
 .square {
+  position: relative;
+  display: inline-block;
   background: #fe1662;
+  border: 2px solid #fe4984;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 3px 3px 0 #fe4984;
+  -moz-box-shadow: 3px 3px 0 #fe4984;
+  -ms-box-shadow: 3px 3px 0 #fe4984;
+  box-shadow: 3px 3px 0 #fe4984;
+  -webkit-transition: color 0.5s ease;
+  -moz-transition: color 0.5s ease;
+  -ms-transition: color 0.5s ease;
+  transition: color 0.5s ease;
   margin: 5px;
-  width: 90px;
-  height: 90px;
-  border-radius: 6px;
+  height: 110px;
+  width: 110px;
   cursor: pointer;
-  -webkit-transition: background-color 0.3s;
-  transition: background-color 0.3s;
-  position: relative; }
+  box-sizing: border-box; }
+  .square:hover {
+    box-shadow: none;
+    color: white;
+    background: #fe4984; }
 
 .game-info {
   margin-left: 20px; }

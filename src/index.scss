@@ -32,38 +32,47 @@ ul {
 }
 
 .game {
-  
 }
 
 .game-board {
+  position: relative;
   @include prefix(box-shadow, 10px 10px 0 rgba(0, 0, 0, 0.1));
   background-color: darken($blue, 10%);
-  margin: 20px auto;
+  margin: 40px auto;
   border-radius: 6px;
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
   padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  text-align: center;
 }
 
 .board-row {
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  display: block;
 }
 
 .square {
-  background: $red;
-  // border: 2px solid lighten($red, 10%);
-  // @include prefix(box-shadow, 3px 3px 0 lighten(black, 10%));
-  // @include prefix(border-radius, 5px);
-  margin: 5px;
-  width: 90px;
-  height: 90px;
-  border-radius: 6px;
-  cursor: pointer;
-  -webkit-transition: background-color 0.3s;
-  transition: background-color 0.3s;
   position: relative;
+  display: inline-block;
+  background: $red;
+  border: 2px solid lighten($red, 10%);
+  // @include prefix(box-shadow, 3px 3px 0 lighten(black, 10%));
+  @include prefix(border-radius, 5px);
+  @include prefix(box-shadow, 3px 3px 0 lighten($red, 10%));
+  @include prefix(transition, color .5s ease);
+  margin: 5px;
+  height: 110px;
+  width: 110px;
+  cursor: pointer;
+  box-sizing: border-box;
+  &:hover {
+    box-shadow: none;
+    color: white;
+    background: lighten($red, 10%);
+  }
 }
 
 .game-info {
