@@ -126,6 +126,8 @@ body {
   .square {
     width: 20vw;
     height: 20vw; }
+    .square p {
+      font-size: 3em; }
 
   .game-info {
     position: relative;
