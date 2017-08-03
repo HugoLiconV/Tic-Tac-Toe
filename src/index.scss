@@ -19,11 +19,16 @@ body {
   background-color: $blue;
   margin: 20px;
 }
-//lista de jugadas
-ol,
-ul {
-  padding-left: 30px;
+
+.title {
+  font-family: $pacifico;
+  color: $red;
+  text-align: center;
+  font-size: 5em;
+  letter-spacing: 0.2rem;
 }
+
+//lista de jugadas
 
 .status {
   margin-bottom: 10px;
@@ -66,19 +71,20 @@ ul {
   width: 110px;
   cursor: pointer;
   box-sizing: border-box;
+  color: white;
   &:hover {
     box-shadow: none;
-    color: white;
     background: lighten($red, 10%);
   }
   p {
-    font-size: 4em;
+    font-size: 8em;
     font-weight: bold;
-    color: white;
     position: relative;
     margin: auto;
-    display: inline-block;
-    box-sizing: border-box;
+  }
+
+  &:focus {
+    outline: 0;
   }
 }
 
@@ -93,11 +99,63 @@ ul {
   padding: 5px;
 }
 .status {
-  color: green;
-
+  color: white;
+  text-align: center;
+  font-size: 2em;
 }
 
 .moves {
-  li {
+  color: white;
+  font-size: 1.5em;
+  li > a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: $red;
+    cursor: pointer;
   }
+}
+
+@media only screen and (max-width: 768px) {
+  body{
+    margin: 0;
+    padding: 0;
+  }
+  .title{
+    font-size: 3rem;
+  }
+
+  .game-board {
+    position: relative;
+    margin: 20px 10px;
+    height: auto;
+    padding: 5px;
+    display: inherit;
+    width: auto;
+  }
+
+  .game-info {
+  position: relative;
+  @include prefix(box-shadow, 10px 10px 0 rgba(0, 0, 0, 0.1));
+  background-color: darken($blue, 10%);
+  margin: 20px 10px;
+  border-radius: 6px;
+  height: auto;
+  padding: 5px;
+}
+.status {
+  color: white;
+  text-align: center;
+  font-size: 2em;
+}
+
+.moves {
+  color: white;
+  font-size: 1.5em;
+  li > a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: $red;
+    cursor: pointer;
+  }
+}
 }

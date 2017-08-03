@@ -8,6 +8,7 @@
     "react-scripts": "1.0.10"
   },
   "scripts": {
+    "browser": "browser-sync start --server --directory --files \"**/*\" ",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

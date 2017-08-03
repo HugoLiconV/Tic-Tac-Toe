@@ -136,7 +136,7 @@ class Game extends React.Component {
     }
     return (
       <div className="game">
-        <div className="Title">Tic-Tac-Toe</div>
+        <div className="title">Tic-Tac-Toe</div>
         <div className="game-board">
           <Board squares={current.squares} onClick={i => this.handleClick(i)} />
         </div>
