@@ -114,6 +114,19 @@ body {
     display: inherit;
     width: auto; }
 
+  .board-row {
+    display: -ms-flexbox;
+    display: flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center; }
+
+  .square {
+    width: 20vw;
+    height: 20vw; }
+
   .game-info {
     position: relative;
     -webkit-box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);

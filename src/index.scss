@@ -116,11 +116,11 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
-  body{
+  body {
     margin: 0;
     padding: 0;
   }
-  .title{
+  .title {
     font-size: 3rem;
   }
 
@@ -132,30 +132,42 @@ body {
     display: inherit;
     width: auto;
   }
-
-  .game-info {
-  position: relative;
-  @include prefix(box-shadow, 10px 10px 0 rgba(0, 0, 0, 0.1));
-  background-color: darken($blue, 10%);
-  margin: 20px 10px;
-  border-radius: 6px;
-  height: auto;
-  padding: 5px;
-}
-.status {
-  color: white;
-  text-align: center;
-  font-size: 2em;
-}
-
-.moves {
-  color: white;
-  font-size: 1.5em;
-  li > a {
-    margin-left: 10px;
-    text-decoration: none;
-    color: $red;
-    cursor: pointer;
+  .board-row {
+    display: -ms-flexbox;
+    display: flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
-}
+  .square{
+    width: 20vw;
+    height: 20vw;
+  }
+  .game-info {
+    position: relative;
+    @include prefix(box-shadow, 10px 10px 0 rgba(0, 0, 0, 0.1));
+    background-color: darken($blue, 10%);
+    margin: 20px 10px;
+    border-radius: 6px;
+    height: auto;
+    padding: 5px;
+  }
+  .status {
+    color: white;
+    text-align: center;
+    font-size: 2em;
+  }
+
+  .moves {
+    color: white;
+    font-size: 1.5em;
+    li > a {
+      margin-left: 10px;
+      text-decoration: none;
+      color: $red;
+      cursor: pointer;
+    }
+  }
 }
