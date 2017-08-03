@@ -1,5 +1,6 @@
+@import url("https://fonts.googleapis.com/css?family=Pacifico|Rubik:300,400,700");
 body {
-  font: 14px "Century Gothic", Futura, sans-serif;
+  font-family: Rubik;
   background-color: #2b2e48;
   margin: 20px; }
 
@@ -9,9 +10,6 @@ ul {
 
 .status {
   margin-bottom: 10px; }
-
-.square:focus {
-  outline: none; }
 
 .kbd-navigation .square:focus {
   background: #ddd; }
@@ -29,13 +27,13 @@ ul {
   height: 400px;
   padding: 5px;
   display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
   text-align: center; }
 
 .board-row {
-  display: block; }
+  display: flex; }
 
 .square {
   position: relative;
@@ -63,8 +61,28 @@ ul {
     box-shadow: none;
     color: white;
     background: #fe4984; }
+  .square p {
+    font-size: 4em;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    margin: auto;
+    display: inline-block;
+    box-sizing: border-box; }
 
 .game-info {
-  margin-left: 20px; }
+  position: relative;
+  -webkit-box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);
+  background-color: #181a28;
+  margin: 40px 20px;
+  border-radius: 6px;
+  height: auto;
+  padding: 5px; }
+
+.status {
+  color: green; }
 
 /*# sourceMappingURL=index.css.map */

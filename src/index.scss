@@ -1,19 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Rubik:300,400,700');
 @mixin prefix($prop, $val) {
   @each $prefix in '-webkit-', '-moz-', '-ms-', '' {
     #{$prefix}#{$prop}: $val;
   }
 }
 
+//fons
+$pacifico: Pacifico;
+$rubik: Rubik;
+
+//colors
 $red: #fe1662;
 $blue: #2b2e48;
 $gray: #404040;
 
 body {
-  font: 14px "Century Gothic", Futura, sans-serif;
+  font-family: $rubik;
   background-color: $blue;
   margin: 20px;
 }
-
+//lista de jugadas
 ol,
 ul {
   padding-left: 30px;
@@ -23,15 +29,8 @@ ul {
   margin-bottom: 10px;
 }
 
-.square:focus {
-  outline: none;
-}
-
 .kbd-navigation .square:focus {
   background: #ddd;
-}
-
-.game {
 }
 
 .game-board {
@@ -44,14 +43,14 @@ ul {
   height: 400px;
   padding: 5px;
   display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
   text-align: center;
 }
 
 .board-row {
-  display: block;
+  display: flex;
 }
 
 .square {
@@ -59,7 +58,6 @@ ul {
   display: inline-block;
   background: $red;
   border: 2px solid lighten($red, 10%);
-  // @include prefix(box-shadow, 3px 3px 0 lighten(black, 10%));
   @include prefix(border-radius, 5px);
   @include prefix(box-shadow, 3px 3px 0 lighten($red, 10%));
   @include prefix(transition, color .5s ease);
@@ -73,8 +71,33 @@ ul {
     color: white;
     background: lighten($red, 10%);
   }
+  p {
+    font-size: 4em;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    margin: auto;
+    display: inline-block;
+    box-sizing: border-box;
+  }
 }
 
 .game-info {
-  margin-left: 20px;
+  position: relative;
+  @include prefix(box-shadow, 10px 10px 0 rgba(0, 0, 0, 0.1));
+  background-color: darken($blue, 10%);
+  margin: 40px 20px;
+  border-radius: 6px;
+  // width: 80%;
+  height: auto;
+  padding: 5px;
+}
+.status {
+  color: green;
+
+}
+
+.moves {
+  li {
+  }
 }
